@@ -1,0 +1,102 @@
+.card {
+    margin: 0 auto;
+    width: 90%;
+    background-color: var(--veryDarkBlue_cardBg);
+    padding: 1.4rem;
+    border-radius: 1rem;
+    box-shadow: 0px 6px 2rem 5px hsl(216, 58%, 8%);
+}
+.card-img {
+    margin-bottom: 1.4rem;
+    position: relative;
+}
+.card-img > img{
+    display: block;
+    width: 100%;
+    border-radius: .5rem;
+}
+.card-img-overlay {
+    display: block;
+    position: absolute;
+    background-color: var(--cyanOverlay);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+.card-img-overlay:hover{ opacity: 1;}
+.card-img-overlay > img { height: 2.5rem;}
+.card div + a {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: .9rem;
+    display: inline-block;
+}
+.card div + a:hover {
+    transition: color .3s;
+    color: var(--cyan);
+}
+.card a+p {
+    color: var(--softBlue);
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: .9rem;
+}
+.status {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--softBlue);
+}
+.status-ether {
+    color: var(--cyan);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.status-ether img, .status-clock img {margin-right: 6px;}
+.status-ether img {
+    width: 11px;
+    height: 18px;
+}
+.status-clock img {
+    width: 17px;
+    height: 17px;
+}
+.status-clock {
+    color: var(--softBlue);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    gap: calc(1rem - 2px);
+    color: var(--softBlue);
+    font-weight: 300;
+}
+.avatar img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 2rem;
+}
+.avatar a {color: var(--white);}
+.avatar a:hover {
+    transition: color .3s;
+    color: var(--cyan);
+}
+
+@media (min-width: 376px) {
+    .card {
+        width: 350px;
+    }
+}
